@@ -1,110 +1,212 @@
+/* =====================================================
+   NIHS ZOMBIE APOCALYPSE
+   STEP 2 - INTRO + HOME MENU
+===================================================== */
+
+
+/* =====================================================
+   INTRO SCENES
+===================================================== */
+
 const scenes = [
+
     document.getElementById("scene1"),
+
     document.getElementById("scene2"),
+
     document.getElementById("scene3"),
+
     document.getElementById("scene4"),
+
     document.getElementById("scene5")
+
 ];
 
+
 let currentScene = 0;
+
+
+/* Show one intro scene */
 
 function showScene(index) {
 
     scenes.forEach((scene, i) => {
 
         if (i === index) {
+
             scene.classList.add("active");
+
         } else {
+
             scene.classList.remove("active");
+
         }
 
     });
 
 }
 
-function nextScene() {
 
-    if (currentScene < scenes.length - 1) {
+/* =====================================================
+   INTRO SEQUENCE
+===================================================== */
 
-        currentScene++;
+function runIntro() {
+
+    showScene(0);
+
+
+    /* Scene 1 */
+
+    setTimeout(() => {
+
+        currentScene = 1;
 
         showScene(currentScene);
 
-        setTimeout(nextScene, 5000);
 
-    }
+        /* Scene 2 */
+
+        setTimeout(() => {
+
+            currentScene = 2;
+
+            showScene(currentScene);
+
+
+            /* Scene 3 */
+
+            setTimeout(() => {
+
+                currentScene = 3;
+
+                showScene(currentScene);
+
+
+                /* Scene 4 */
+
+                setTimeout(() => {
+
+                    currentScene = 4;
+
+                    showScene(currentScene);
+
+
+                }, 5000);
+
+
+            }, 5000);
+
+
+        }, 5000);
+
+
+    }, 5000);
 
 }
 
 
-/*
-    INTRO TIMELINE
-
-    Scene 1 = 5 seconds
-    Scene 2 = 5 seconds
-    Scene 3 = 5 seconds
-    Scene 4 = 5 seconds
-
-    Then Scene 5 stays as the MENU.
-*/
-
-showScene(0);
-
-setTimeout(() => {
-
-    currentScene = 1;
-    showScene(currentScene);
-
-    setTimeout(() => {
-
-        currentScene = 2;
-        showScene(currentScene);
-
-        setTimeout(() => {
-
-            currentScene = 3;
-            showScene(currentScene);
-
-            setTimeout(() => {
-
-                currentScene = 4;
-                showScene(currentScene);
-
-            }, 5000);
-
-        }, 5000);
-
-    }, 5000);
-
-}, 5000);
+runIntro();
 
 
-/* =========================
-   START BUTTON
-========================= */
+/* =====================================================
+   HOME MENU
+===================================================== */
+
+const intro = document.getElementById("intro");
+
+const homeMenu = document.getElementById("homeMenu");
 
 const startButton = document.getElementById("startButton");
 
+
+/* =====================================================
+   START BUTTON
+===================================================== */
+
 startButton.addEventListener("click", () => {
 
-    /*
-       STEP 2 will connect this button
-       to the HOME MENU.
+    /* Hide intro */
 
-       For now, it shows a temporary message.
-    */
+    intro.style.opacity = "0";
 
-    startButton.innerText = "LOADING...";
+    intro.style.pointerEvents = "none";
 
-    startButton.disabled = true;
+
+    /* Show home menu */
 
     setTimeout(() => {
 
-        alert("STEP 1 OK! Sunod nato ang HOME MENU.");
+        homeMenu.classList.add("active");
 
-        startButton.innerText = "START";
-        startButton.disabled = false;
-
-    }, 700);
+    }, 400);
 
 });
+
+
+/* =====================================================
+   MENU BUTTONS
+===================================================== */
+
+const playButton =
+    document.getElementById("playButton");
+
+
+const settingsButton =
+    document.getElementById("settingsButton");
+
+
+const shopButton =
+    document.getElementById("shopButton");
+
+
+/* PLAY */
+
+playButton.addEventListener("click", () => {
+
+    /*
+       CHARACTER SELECTION WILL BE
+       ADDED IN THE NEXT STEPS.
+    */
+
+    alert(
+        "PLAY\n\n" +
+        "Sunod nato: Character Selection."
+    );
+
+});
+
+
+/* SETTINGS */
+
+settingsButton.addEventListener("click", () => {
+
+    /*
+       SETTINGS SYSTEM WILL BE
+       ADDED LATER.
+    */
+
+    alert(
+        "SETTINGS\n\n" +
+        "Sunod nato: Volume ug Sound Settings."
+    );
+
+});
+
+
+/* SHOP */
+
+shopButton.addEventListener("click", () => {
+
+    /*
+       SHOP SYSTEM WILL BE
+       ADDED LATER.
+    */
+
+    alert(
+        "SHOP\n\n" +
+        "Sunod nato: Weapons Shop."
+    );
+
+});
+   
