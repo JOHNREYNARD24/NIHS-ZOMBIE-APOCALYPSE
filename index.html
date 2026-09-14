@@ -1,296 +1,1615 @@
 <!DOCTYPE html>
 <html lang="ceb">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NIHS Zombie Apocalypse</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="theme-color"
+        content="#160721"
+    >
+
+    <title>
+        NEW ISRAEL HIGH SCHOOL — ZOMBIE APOCALYPSE
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
 
 <body>
 
-<!-- =====================================================
-     INTRO
-===================================================== -->
-
-<main id="intro">
-
-    <section class="scene active" id="scene1">
-        <img src="nihs.png" class="nihs-logo" alt="NIHS Logo">
-    </section>
-
-    <section class="scene" id="scene2">
-        <h1>NEW ISRAEL HIGH SCHOOL</h1>
-        <h2>ZOMBIE APOCALYPSE</h2>
-    </section>
-
-    <section class="scene" id="scene3">
-        <div class="developer">
-            <p>ANG KANI NGA DULA KAY</p>
-            <strong>GIBUHAT NI</strong>
-            <h2>JOHN REYNARD MIRAS</h2>
-            <p>SIYA ANG DEVELOPER ANI</p>
-        </div>
-    </section>
-
-    <section class="scene" id="scene4">
-        <div class="warning">
-            <h2>TIMANI KINI NGA DULA</h2>
-            <p>KAY PANG LINGAW² RA.</p>
-            <p>AYAW SERYOSOHA ARON DI KA MAMATAY 😂</p>
-        </div>
-    </section>
-
-    <section class="scene final-scene" id="scene5">
-
-        <div class="final-logo-wrap">
-            <div class="blood-effect blood1"></div>
-            <div class="blood-effect blood2"></div>
-            <div class="blood-effect blood3"></div>
-
-            <img src="nihs.png" class="final-logo" alt="NIHS Logo">
-
-            <div class="game-name">
-                NIHS ZOMBIE APOCALYPSE
-            </div>
-        </div>
-
-        <button id="startButton">START</button>
-
-    </section>
-
-</main>
-
 
 <!-- =====================================================
-     HOME MENU
+     GAME APPLICATION
 ===================================================== -->
 
-<main id="homeMenu">
+<div id="game">
 
-    <div class="home-background"></div>
-    <div class="home-overlay"></div>
 
-    <section class="home-content">
+    <!-- =================================================
+         INTRO / OPENING
+    ================================================== -->
 
-        <img src="nihs.png" class="menu-logo" alt="NIHS">
+    <section
+        id="intro"
+        class="screen intro-screen"
+    >
 
-        <h1 class="menu-title">NIHS ZOMBIE</h1>
-        <h2 class="menu-subtitle">APOCALYPSE</h2>
+        <!-- SCENE 1 -->
+        <div
+            id="scene1"
+            class="intro-scene active"
+        >
 
-        <div class="menu-buttons">
-
-            <button class="menu-button play-button" id="playButton">
-                ▶ PLAY
-            </button>
-
-            <button class="menu-button" id="settingsButton">
-                ⚙ SETTINGS
-            </button>
-
-            <button class="menu-button" id="shopButton">
-                🛒 SHOP
-            </button>
+            <img
+                src="nihs.png"
+                class="nihs-logo"
+                alt="New Israel High School Logo"
+            >
 
         </div>
 
-        <div class="menu-footer">
-            NIHS ZOMBIE APOCALYPSE
-        </div>
 
-    </section>
+        <!-- SCENE 2 -->
+        <div
+            id="scene2"
+            class="intro-scene"
+        >
 
-</main>
+            <h1>
+                NEW ISRAEL HIGH SCHOOL
+            </h1>
 
-
-<!-- =====================================================
-     PLAY / ROLE SELECTION
-===================================================== -->
-
-<main id="roleScreen" class="game-screen">
-
-    <div class="screen-bg"></div>
-
-    <section class="selection-content">
-
-        <h1 class="screen-title">PILIA ANG IMONG ROLE</h1>
-
-        <p class="screen-description">
-            Kinsa ka sa dula?
-        </p>
-
-        <div class="big-selection">
-
-            <button class="choice-card" data-role="student">
-                <div class="choice-icon">🎒</div>
-                <strong>ESTUDYANTE</strong>
-                <small>Grade 7 - 12</small>
-            </button>
-
-            <button class="choice-card" data-role="teacher">
-                <div class="choice-icon">👨‍🏫</div>
-                <strong>TEACHER</strong>
-                <small>Grade 7 - 12</small>
-            </button>
+            <h2>
+                ZOMBIE APOCALYPSE
+            </h2>
 
         </div>
 
-        <button class="back-button" id="roleBack">
-            ← BALIK
-        </button>
 
-    </section>
+        <!-- SCENE 3 -->
+        <div
+            id="scene3"
+            class="intro-scene"
+        >
 
-</main>
+            <div class="developer-intro">
 
-
-<!-- =====================================================
-     GRADE SELECTION
-===================================================== -->
-
-<main id="gradeScreen" class="game-screen">
-
-    <div class="screen-bg"></div>
-
-    <section class="selection-content">
-
-        <h1 class="screen-title">PILIA ANG GRADE</h1>
-
-        <div class="grade-grid">
-
-            <button class="grade-button" data-grade="7">GRADE 7</button>
-            <button class="grade-button" data-grade="8">GRADE 8</button>
-            <button class="grade-button" data-grade="9">GRADE 9</button>
-            <button class="grade-button" data-grade="10">GRADE 10</button>
-            <button class="grade-button" data-grade="11">GRADE 11</button>
-            <button class="grade-button" data-grade="12">GRADE 12</button>
-
-        </div>
-
-        <button class="back-button" id="gradeBack">
-            ← BALIK
-        </button>
-
-    </section>
-
-</main>
-
-
-<!-- =====================================================
-     GENDER SELECTION
-===================================================== -->
-
-<main id="genderScreen" class="game-screen">
-
-    <div class="screen-bg"></div>
-
-    <section class="selection-content">
-
-        <h1 class="screen-title">PILIA ANG GENDER</h1>
-
-        <p class="screen-description">
-            Pilia kung lalaki o babaye ang imong character.
-        </p>
-
-        <div class="big-selection">
-
-            <button class="choice-card" data-gender="boy">
-                <div class="choice-icon">👦</div>
-                <strong>LALAKI</strong>
-            </button>
-
-            <button class="choice-card" data-gender="girl">
-                <div class="choice-icon">👧</div>
-                <strong>BABAYE</strong>
-            </button>
-
-        </div>
-
-        <button class="back-button" id="genderBack">
-            ← BALIK
-        </button>
-
-    </section>
-
-</main>
-
-
-<!-- =====================================================
-     CHARACTER SELECTION
-===================================================== -->
-
-<main id="characterScreen" class="game-screen">
-
-    <div class="screen-bg"></div>
-
-    <section class="character-content">
-
-        <div class="character-header">
-
-            <div>
-                <h1 class="screen-title">PILIA ANG CHARACTER</h1>
-
-                <p id="selectionInfo">
-                    Character
+                <p>
+                    ANG KANI NGA DULA KAY
                 </p>
+
+                <strong>
+                    GIBUHAT NI
+                </strong>
+
+                <h2>
+                    JOHN REYNARD MIRAS
+                </h2>
+
+                <p>
+                    SIYA ANG DEVELOPER ANI
+                </p>
+
             </div>
 
         </div>
 
 
-        <div id="characterGrid" class="character-grid">
-            <!-- JavaScript ang magbutang sa characters -->
+        <!-- SCENE 4 -->
+        <div
+            id="scene4"
+            class="intro-scene"
+        >
+
+            <div class="warning-intro">
+
+                <h2>
+                    TIMANI KINI NGA DULA
+                </h2>
+
+                <p>
+                    KAY PANG LINGAW² RA.
+                </p>
+
+                <p>
+                    AYAW SERYOSOHA ARON DI KA MAMATAY 😂
+                </p>
+
+            </div>
+
         </div>
 
 
-        <div class="character-actions">
+        <!-- SCENE 5 -->
+        <div
+            id="scene5"
+            class="intro-scene final-intro"
+        >
 
-            <button class="back-button" id="characterBack">
+            <div class="final-logo-container">
+
+                <span class="blood-drop drop-1"></span>
+                <span class="blood-drop drop-2"></span>
+                <span class="blood-drop drop-3"></span>
+
+                <img
+                    src="nihs.png"
+                    class="final-logo"
+                    alt="NIHS"
+                >
+
+                <h2>
+                    NIHS ZOMBIE APOCALYPSE
+                </h2>
+
+            </div>
+
+
+            <button
+                id="startButton"
+                class="primary-button start-button"
+            >
+                START
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         HOME MENU
+    ================================================== -->
+
+    <section
+        id="homeMenu"
+        class="screen hidden-screen"
+    >
+
+        <div class="home-background"></div>
+
+        <div class="home-overlay"></div>
+
+
+        <div class="home-content">
+
+            <img
+                src="nihs.png"
+                class="menu-logo"
+                alt="NIHS Logo"
+            >
+
+
+            <h1 class="menu-title">
+                NIHS ZOMBIE
+            </h1>
+
+            <h2 class="menu-subtitle">
+                APOCALYPSE
+            </h2>
+
+
+            <div class="main-menu-buttons">
+
+                <button
+                    id="playButton"
+                    class="menu-button play-button"
+                >
+                    ▶ PLAY
+                </button>
+
+
+                <button
+                    id="settingsButton"
+                    class="menu-button"
+                >
+                    ⚙ SETTINGS
+                </button>
+
+
+                <button
+                    id="shopButton"
+                    class="menu-button"
+                >
+                    🛒 SHOP
+                </button>
+
+            </div>
+
+
+            <div class="developer-footer">
+                JOHN REYNARD MIRAS
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ROLE SELECTION
+    ================================================== -->
+
+    <section
+        id="roleScreen"
+        class="screen game-screen hidden-screen"
+    >
+
+        <div class="screen-background"></div>
+
+
+        <div class="selection-container">
+
+            <h1 class="screen-title">
+                PILIA ANG IMONG ROLE
+            </h1>
+
+            <p class="screen-description">
+                Kinsa ka sa dula?
+            </p>
+
+
+            <div class="choice-container">
+
+
+                <!-- STUDENT -->
+
+                <button
+                    class="choice-card"
+                    data-role="student"
+                >
+
+                    <div class="choice-icon">
+                        🎒
+                    </div>
+
+                    <h2>
+                        ESTUDYANTE
+                    </h2>
+
+                    <p>
+                        Grade 7 — 12
+                    </p>
+
+                </button>
+
+
+                <!-- TEACHER -->
+
+                <button
+                    class="choice-card"
+                    data-role="teacher"
+                >
+
+                    <div class="choice-icon">
+                        👨‍🏫
+                    </div>
+
+                    <h2>
+                        TEACHER
+                    </h2>
+
+                    <p>
+                        Grade 7 — 12
+                    </p>
+
+                </button>
+
+            </div>
+
+
+            <button
+                id="roleBack"
+                class="back-button"
+            >
                 ← BALIK
             </button>
 
-            <button class="continue-button" id="characterContinue" disabled>
-                PADAYON →
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         GRADE SELECTION
+    ================================================== -->
+
+    <section
+        id="gradeScreen"
+        class="screen game-screen hidden-screen"
+    >
+
+        <div class="screen-background"></div>
+
+
+        <div class="selection-container">
+
+            <h1 class="screen-title">
+                PILIA ANG GRADE
+            </h1>
+
+            <p
+                id="roleInfo"
+                class="screen-description"
+            >
+                Pili-a ang imong grade.
+            </p>
+
+
+            <div class="grade-grid">
+
+
+                <button
+                    class="grade-button"
+                    data-grade="7"
+                >
+                    GRADE 7
+                </button>
+
+
+                <button
+                    class="grade-button"
+                    data-grade="8"
+                >
+                    GRADE 8
+                </button>
+
+
+                <button
+                    class="grade-button"
+                    data-grade="9"
+                >
+                    GRADE 9
+                </button>
+
+
+                <button
+                    class="grade-button"
+                    data-grade="10"
+                >
+                    GRADE 10
+                </button>
+
+
+                <button
+                    class="grade-button"
+                    data-grade="11"
+                >
+                    GRADE 11
+                </button>
+
+
+                <button
+                    class="grade-button"
+                    data-grade="12"
+                >
+                    GRADE 12
+                </button>
+
+            </div>
+
+
+            <button
+                id="gradeBack"
+                class="back-button"
+            >
+                ← BALIK
             </button>
 
         </div>
 
     </section>
 
-</main>
 
 
-<!-- =====================================================
-     CHARACTER CONFIRMATION
-===================================================== -->
+    <!-- =================================================
+         GENDER SELECTION
+    ================================================== -->
 
-<main id="confirmScreen" class="game-screen">
+    <section
+        id="genderScreen"
+        class="screen game-screen hidden-screen"
+    >
 
-    <div class="screen-bg"></div>
+        <div class="screen-background"></div>
 
-    <section class="confirm-content">
 
-        <h1 class="screen-title">
-            NAPILI NIMO
-        </h1>
+        <div class="selection-container">
 
-        <div id="selectedCharacter"></div>
+            <h1 class="screen-title">
+                PILIA ANG GENDER
+            </h1>
 
-        <p id="confirmText"></p>
+            <p class="screen-description">
+                Pilia kung lalaki o babaye.
+            </p>
 
-        <button id="confirmButton" class="continue-button">
-            PADAYON →
-        </button>
 
-        <button id="confirmBack" class="back-button">
-            ← BALIK
-        </button>
+            <div class="choice-container">
+
+
+                <button
+                    class="choice-card"
+                    data-gender="boy"
+                >
+
+                    <div class="choice-icon">
+                        👦
+                    </div>
+
+                    <h2>
+                        LALAKI
+                    </h2>
+
+                </button>
+
+
+                <button
+                    class="choice-card"
+                    data-gender="girl"
+                >
+
+                    <div class="choice-icon">
+                        👧
+                    </div>
+
+                    <h2>
+                        BABAYE
+                    </h2>
+
+                </button>
+
+            </div>
+
+
+            <button
+                id="genderBack"
+                class="back-button"
+            >
+                ← BALIK
+            </button>
+
+        </div>
 
     </section>
 
-</main>
+
+
+    <!-- =================================================
+         CHARACTER SELECTION
+    ================================================== -->
+
+    <section
+        id="characterScreen"
+        class="screen game-screen hidden-screen"
+    >
+
+        <div class="screen-background"></div>
+
+
+        <div class="character-page">
+
+
+            <div class="character-header">
+
+                <h1 class="screen-title">
+                    PILIA ANG CHARACTER
+                </h1>
+
+                <p
+                    id="selectionInfo"
+                    class="screen-description"
+                >
+                    Character Selection
+                </p>
+
+            </div>
+
+
+            <!-- CHARACTER CARDS GENERATED BY JS -->
+
+            <div
+                id="characterGrid"
+                class="character-grid"
+            >
+
+            </div>
+
+
+            <div class="character-actions">
+
+                <button
+                    id="characterBack"
+                    class="back-button"
+                >
+                    ← BALIK
+                </button>
+
+
+                <button
+                    id="characterContinue"
+                    class="continue-button"
+                    disabled
+                >
+                    PADAYON →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CHARACTER CONFIRMATION
+    ================================================== -->
+
+    <section
+        id="confirmScreen"
+        class="screen game-screen hidden-screen"
+    >
+
+        <div class="screen-background"></div>
+
+
+        <div class="confirmation-container">
+
+            <h1 class="screen-title">
+                NAPILI NIMO
+            </h1>
+
+
+            <div
+                id="selectedCharacter"
+                class="selected-character-container"
+            >
+
+            </div>
+
+
+            <p
+                id="confirmText"
+                class="confirm-text"
+            >
+                Character
+            </p>
+
+
+            <button
+                id="confirmButton"
+                class="continue-button"
+            >
+                PADAYON →
+            </button>
+
+
+            <button
+                id="confirmBack"
+                class="back-button"
+            >
+                ← BALIK
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         GAME MODE — HUMAN / ZOMBIE
+    ================================================== -->
+
+    <section
+        id="modeScreen"
+        class="screen game-screen hidden-screen"
+    >
+
+        <div class="screen-background"></div>
+
+
+        <div class="selection-container">
+
+            <h1 class="screen-title">
+                PILIA ANG MODE
+            </h1>
+
+            <p
+                id="modePlayerInfo"
+                class="screen-description"
+            >
+                Human or Zombie?
+            </p>
+
+
+            <div class="choice-container">
+
+
+                <!-- HUMAN -->
+
+                <button
+                    id="humanMode"
+                    class="choice-card mode-card"
+                >
+
+                    <div class="choice-icon">
+                        🧑
+                    </div>
+
+                    <h2>
+                        TAO
+                    </h2>
+
+                    <p>
+                        Survive the zombie apocalypse
+                    </p>
+
+                </button>
+
+
+                <!-- ZOMBIE -->
+
+                <button
+                    id="zombieMode"
+                    class="choice-card mode-card"
+                >
+
+                    <div class="choice-icon">
+                        🧟
+                    </div>
+
+                    <h2>
+                        ZOMBIE
+                    </h2>
+
+                    <p>
+                        Zombie game mode
+                    </p>
+
+                </button>
+
+            </div>
+
+
+            <button
+                id="modeBack"
+                class="back-button"
+            >
+                ← BALIK
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LEVEL SELECT
+    ================================================== -->
+
+    <section
+        id="levelScreen"
+        class="screen game-screen hidden-screen"
+    >
+
+        <div class="screen-background"></div>
+
+
+        <div class="selection-container">
+
+            <h1 class="screen-title">
+                PILIA ANG LEVEL
+            </h1>
+
+            <p
+                id="levelInfo"
+                class="screen-description"
+            >
+                Choose your level.
+            </p>
+
+
+            <div class="level-grid">
+
+
+                <button
+                    class="level-button"
+                    data-level="1"
+                >
+                    <span>01</span>
+                    <strong>THE CLASSROOM</strong>
+                </button>
+
+
+                <button
+                    class="level-button"
+                    data-level="2"
+                >
+                    <span>02</span>
+                    <strong>THE HALLWAY</strong>
+                </button>
+
+
+                <button
+                    class="level-button"
+                    data-level="3"
+                >
+                    <span>03</span>
+                    <strong>THE CANTEEN</strong>
+                </button>
+
+
+                <button
+                    class="level-button"
+                    data-level="4"
+                >
+                    <span>04</span>
+                    <strong>THE SCHOOL YARD</strong>
+                </button>
+
+
+                <button
+                    class="level-button"
+                    data-level="5"
+                >
+                    <span>05</span>
+                    <strong>THE GYM</strong>
+                </button>
+
+
+                <button
+                    class="level-button"
+                    data-level="6"
+                >
+                    <span>06</span>
+                    <strong>FINAL SURVIVAL</strong>
+                </button>
+
+            </div>
+
+
+            <button
+                id="levelBack"
+                class="back-button"
+            >
+                ← BALIK
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ACTUAL GAME
+    ================================================== -->
+
+    <section
+        id="gameScreen"
+        class="screen gameplay-screen hidden-screen"
+    >
+
+        <!-- GAME WORLD -->
+
+        <div
+            id="gameWorld"
+            class="game-world"
+        >
+
+            <!-- SCHOOL / ROOM BACKGROUND -->
+
+            <div
+                id="room"
+                class="room"
+            >
+
+                <div class="room-floor"></div>
+
+                <div class="room-wall"></div>
+
+                <div class="room-decoration decoration-1"></div>
+
+                <div class="room-decoration decoration-2"></div>
+
+                <div class="room-door"></div>
+
+            </div>
+
+
+            <!-- ZOMBIES GENERATED BY JS -->
+
+            <div
+                id="zombieContainer"
+                class="zombie-container"
+            >
+
+            </div>
+
+
+            <!-- PLAYER -->
+
+            <div
+                id="player"
+                class="player-character"
+            >
+
+                <div class="player-shadow"></div>
+
+                <div class="player-avatar">
+
+                    <div class="player-hair"></div>
+
+                    <div class="player-head"></div>
+
+                    <div class="player-body"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             GAME HUD
+        ============================================== -->
+
+        <div class="game-hud">
+
+
+            <!-- TOP LEFT -->
+
+            <div class="hud-left">
+
+                <div class="player-hud">
+
+                    <div
+                        id="hudCharacterName"
+                        class="hud-name"
+                    >
+                        PLAYER
+                    </div>
+
+
+                    <div class="health-bar">
+
+                        <div
+                            id="healthFill"
+                            class="health-fill"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="health-text">
+
+                        ❤️
+                        <span id="healthText">
+                            100
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TOP CENTER -->
+
+            <div class="hud-center">
+
+                <div
+                    id="levelLabel"
+                    class="level-label"
+                >
+                    LEVEL 1
+                </div>
+
+                <div
+                    id="objectiveLabel"
+                    class="objective-label"
+                >
+                    SURVIVE
+                </div>
+
+            </div>
+
+
+
+            <!-- TOP RIGHT -->
+
+            <div class="hud-right">
+
+                <div class="coin-display">
+
+                    🪙
+                    <span id="coinText">
+                        0
+                    </span>
+
+                </div>
+
+
+                <button
+                    id="pauseButton"
+                    class="hud-button"
+                >
+                    ⏸
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             WEAPON HUD
+        ============================================== -->
+
+        <div class="weapon-hud">
+
+            <div
+                id="currentWeapon"
+                class="current-weapon"
+            >
+                🔪
+                <span>
+                    BASIC WEAPON
+                </span>
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             MOBILE CONTROLS
+        ============================================== -->
+
+        <div
+            id="mobileControls"
+            class="mobile-controls"
+        >
+
+
+            <!-- MOVEMENT -->
+
+            <div class="movement-controls">
+
+                <button
+                    class="move-button up"
+                    data-control="up"
+                >
+                    ▲
+                </button>
+
+                <button
+                    class="move-button left"
+                    data-control="left"
+                >
+                    ◀
+                </button>
+
+                <button
+                    class="move-button down"
+                    data-control="down"
+                >
+                    ▼
+                </button>
+
+                <button
+                    class="move-button right"
+                    data-control="right"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+
+            <!-- ATTACK -->
+
+            <button
+                id="attackButton"
+                class="attack-button"
+            >
+                ⚔
+                <span>
+                    ATTACK
+                </span>
+            </button>
+
+        </div>
+
+
+
+        <!-- =============================================
+             DESKTOP CONTROLS INFO
+        ============================================== -->
+
+        <div class="desktop-controls">
+
+            <span>
+                W A S D
+            </span>
+
+            <span>
+                MOVE
+            </span>
+
+            <span>
+                SPACE
+            </span>
+
+            <span>
+                ATTACK
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PAUSE MENU
+    ================================================== -->
+
+    <section
+        id="pauseScreen"
+        class="overlay-screen hidden-overlay"
+    >
+
+        <div class="pause-panel">
+
+            <h1>
+                PAUSED
+            </h1>
+
+
+            <button
+                id="resumeButton"
+                class="menu-button"
+            >
+                ▶ RESUME
+            </button>
+
+
+            <button
+                id="pauseSettingsButton"
+                class="menu-button"
+            >
+                ⚙ SETTINGS
+            </button>
+
+
+            <button
+                id="quitButton"
+                class="menu-button danger-button"
+            >
+                ✕ QUIT
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SETTINGS
+    ================================================== -->
+
+    <section
+        id="settingsScreen"
+        class="screen game-screen hidden-screen"
+    >
+
+        <div class="screen-background"></div>
+
+
+        <div class="settings-container">
+
+            <h1 class="screen-title">
+                SETTINGS
+            </h1>
+
+
+            <!-- MASTER VOLUME -->
+
+            <div class="setting-box">
+
+                <div class="setting-title">
+                    🔊 MASTER VOLUME
+                </div>
+
+                <input
+                    id="masterVolume"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="80"
+                >
+
+                <span id="volumeValue">
+                    80%
+                </span>
+
+            </div>
+
+
+            <!-- MUSIC -->
+
+            <div class="setting-row">
+
+                <span>
+                    🎵 MUSIC
+                </span>
+
+                <button
+                    id="musicToggle"
+                    class="toggle-button active"
+                >
+                    ON
+                </button>
+
+            </div>
+
+
+            <!-- SOUND EFFECTS -->
+
+            <div class="setting-row">
+
+                <span>
+                    🔊 SOUND EFFECTS
+                </span>
+
+                <button
+                    id="effectsToggle"
+                    class="toggle-button active"
+                >
+                    ON
+                </button>
+
+            </div>
+
+
+            <!-- BACK -->
+
+            <button
+                id="settingsBack"
+                class="back-button"
+            >
+                ← BALIK
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SHOP
+    ================================================== -->
+
+    <section
+        id="shopScreen"
+        class="screen game-screen hidden-screen"
+    >
+
+        <div class="screen-background"></div>
+
+
+        <div class="shop-container">
+
+            <div class="shop-header">
+
+                <div>
+
+                    <h1 class="screen-title">
+                        WEAPONS SHOP
+                    </h1>
+
+                    <p class="screen-description">
+                        Palit og weapon gamit ang coins.
+                    </p>
+
+                </div>
+
+
+                <div class="shop-coins">
+
+                    🪙
+                    <span id="shopCoinText">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="weaponGrid"
+                class="weapon-grid"
+            >
+
+
+                <!-- BASIC -->
+
+                <div
+                    class="weapon-card"
+                    data-weapon="basic"
+                >
+
+                    <div class="weapon-icon">
+                        🔪
+                    </div>
+
+                    <h2>
+                        BASIC WEAPON
+                    </h2>
+
+                    <p>
+                        Damage:
+                        <strong>20</strong>
+                    </p>
+
+                    <p>
+                        Speed:
+                        <strong>Medium</strong>
+                    </p>
+
+                    <button
+                        class="buy-weapon"
+                        data-weapon="basic"
+                    >
+                        OWNED
+                    </button>
+
+                </div>
+
+
+                <!-- BAT -->
+
+                <div
+                    class="weapon-card"
+                    data-weapon="bat"
+                >
+
+                    <div class="weapon-icon">
+                        🏏
+                    </div>
+
+                    <h2>
+                        SCHOOL BAT
+                    </h2>
+
+                    <p>
+                        Damage:
+                        <strong>30</strong>
+                    </p>
+
+                    <p>
+                        Speed:
+                        <strong>Medium</strong>
+                    </p>
+
+                    <button
+                        class="buy-weapon"
+                        data-weapon="bat"
+                    >
+                        🪙 100
+                    </button>
+
+                </div>
+
+
+                <!-- HAMMER -->
+
+                <div
+                    class="weapon-card"
+                    data-weapon="hammer"
+                >
+
+                    <div class="weapon-icon">
+                        🔨
+                    </div>
+
+                    <h2>
+                        HAMMER
+                    </h2>
+
+                    <p>
+                        Damage:
+                        <strong>45</strong>
+                    </p>
+
+                    <p>
+                        Speed:
+                        <strong>Slow</strong>
+                    </p>
+
+                    <button
+                        class="buy-weapon"
+                        data-weapon="hammer"
+                    >
+                        🪙 250
+                    </button>
+
+                </div>
+
+
+                <!-- SPECIAL -->
+
+                <div
+                    class="weapon-card"
+                    data-weapon="special"
+                >
+
+                    <div class="weapon-icon">
+                        ⚔
+                    </div>
+
+                    <h2>
+                        SPECIAL WEAPON
+                    </h2>
+
+                    <p>
+                        Damage:
+                        <strong>65</strong>
+                    </p>
+
+                    <p>
+                        Speed:
+                        <strong>Fast</strong>
+                    </p>
+
+                    <button
+                        class="buy-weapon"
+                        data-weapon="special"
+                    >
+                        🪙 500
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="shopBack"
+                class="back-button"
+            >
+                ← BALIK
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         VIDEO EVENT
+    ================================================== -->
+
+    <div
+        id="videoOverlay"
+        class="video-overlay hidden-overlay"
+    >
+
+        <div class="video-window">
+
+            <button
+                id="closeVideo"
+                class="video-close"
+            >
+                ✕
+            </button>
+
+
+            <video
+                id="eventVideo"
+                controls
+                playsinline
+            >
+
+                <!--
+                    ILAGAY NATIN ANG VIDEO FILE
+                    LATER.
+
+                    Example:
+                    level4.mp4
+                    defeat.mp4
+                    complete.mp4
+                -->
+
+            </video>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         DEFEAT SCREEN
+    ================================================== -->
+
+    <section
+        id="defeatScreen"
+        class="overlay-screen hidden-overlay"
+    >
+
+        <div class="result-panel">
+
+            <div class="result-icon">
+                ☠
+            </div>
+
+            <h1>
+                DEFEATED
+            </h1>
+
+            <p>
+                Napildi ka sa level.
+            </p>
+
+
+            <button
+                id="retryButton"
+                class="menu-button"
+            >
+                🔄 RETRY
+            </button>
+
+
+            <button
+                id="defeatHomeButton"
+                class="menu-button"
+            >
+                🏠 HOME
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LEVEL COMPLETE
+    ================================================== -->
+
+    <section
+        id="completeScreen"
+        class="overlay-screen hidden-overlay"
+    >
+
+        <div class="result-panel">
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+            <h1>
+                LEVEL COMPLETE!
+            </h1>
+
+            <p>
+                Maayo! Nakalahutay ka.
+            </p>
+
+
+            <div class="reward-display">
+
+                🪙
+                +<span id="rewardCoins">
+                    100
+                </span>
+
+            </div>
+
+
+            <button
+                id="nextLevelButton"
+                class="menu-button play-button"
+            >
+                NEXT LEVEL →
+            </button>
+
+
+            <button
+                id="completeHomeButton"
+                class="menu-button"
+            >
+                🏠 HOME
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         NOTIFICATION
+    ================================================== -->
+
+    <div
+        id="gameNotification"
+        class="game-notification"
+    >
+        <span id="notificationText">
+            Notification
+        </span>
+    </div>
+
+
+
+    <!-- =================================================
+         LOADING
+    ================================================== -->
+
+    <div
+        id="loadingScreen"
+        class="loading-screen hidden-overlay"
+    >
+
+        <div class="loading-box">
+
+            <img
+                src="nihs.png"
+                alt="NIHS"
+            >
+
+            <h2>
+                LOADING...
+            </h2>
+
+            <div class="loading-bar">
+
+                <div
+                    id="loadingFill"
+                    class="loading-fill"
+                ></div>
+
+            </div>
+
+            <p id="loadingText">
+                Preparing game...
+            </p>
+
+        </div>
+
+    </div>
+
+
+</div>
 
 
 <!-- =====================================================
@@ -300,4 +1619,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
