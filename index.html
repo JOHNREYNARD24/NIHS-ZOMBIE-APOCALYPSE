@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ceb">
 <head>
     <meta charset="UTF-8">
@@ -11,19 +11,25 @@
 
 <body>
 
+    <!-- =========================
+         INTRO
+    ========================== -->
+
     <main id="intro">
 
-        <!-- SCENE 1: NIHS LOGO -->
+        <!-- SCENE 1 -->
         <section class="scene scene-logo active" id="scene1">
+
             <img
                 src="nihs.png"
                 class="nihs-logo"
                 alt="NIHS Logo"
             >
+
         </section>
 
 
-        <!-- SCENE 2: GAME TITLE -->
+        <!-- SCENE 2 -->
         <section class="scene" id="scene2">
 
             <h1>
@@ -37,7 +43,7 @@
         </section>
 
 
-        <!-- SCENE 3: DEVELOPER -->
+        <!-- SCENE 3 -->
         <section class="scene" id="scene3">
 
             <div class="developer">
@@ -63,7 +69,7 @@
         </section>
 
 
-        <!-- SCENE 4: WARNING -->
+        <!-- SCENE 4 -->
         <section class="scene" id="scene4">
 
             <div class="warning">
@@ -85,7 +91,7 @@
         </section>
 
 
-        <!-- SCENE 5: FINAL INTRO -->
+        <!-- SCENE 5 -->
         <section class="scene final-scene" id="scene5">
 
             <div class="final-logo-wrap">
@@ -116,7 +122,76 @@
     </main>
 
 
+    <!-- =========================
+         HOME MENU
+    ========================== -->
+
+    <main id="homeMenu">
+
+        <div class="home-background"></div>
+
+        <div class="home-overlay"></div>
+
+
+        <section class="home-content">
+
+            <img
+                src="nihs.png"
+                class="menu-logo"
+                alt="NIHS Logo"
+            >
+
+
+            <h1 class="menu-title">
+                NIHS ZOMBIE
+            </h1>
+
+            <h2 class="menu-subtitle">
+                APOCALYPSE
+            </h2>
+
+
+            <div class="menu-buttons">
+
+                <button
+                    class="menu-button play-button"
+                    id="playButton"
+                >
+                    <span class="button-icon">▶</span>
+                    PLAY
+                </button>
+
+
+                <button
+                    class="menu-button"
+                    id="settingsButton"
+                >
+                    <span class="button-icon">⚙</span>
+                    SETTINGS
+                </button>
+
+
+                <button
+                    class="menu-button"
+                    id="shopButton"
+                >
+                    <span class="button-icon">🛒</span>
+                    SHOP
+                </button>
+
+            </div>
+
+
+            <div class="menu-footer">
+                NIHS ZOMBIE APOCALYPSE
+            </div>
+
+        </section>
+
+    </main>
+
+
     <script src="script.js"></script>
 
 </body>
-</html>              
+</html>               
