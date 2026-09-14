@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ceb">
 <head>
     <meta charset="UTF-8">
@@ -11,187 +11,293 @@
 
 <body>
 
-    <!-- =========================
-         INTRO
-    ========================== -->
+<!-- =====================================================
+     INTRO
+===================================================== -->
 
-    <main id="intro">
+<main id="intro">
 
-        <!-- SCENE 1 -->
-        <section class="scene scene-logo active" id="scene1">
+    <section class="scene active" id="scene1">
+        <img src="nihs.png" class="nihs-logo" alt="NIHS Logo">
+    </section>
 
-            <img
-                src="nihs.png"
-                class="nihs-logo"
-                alt="NIHS Logo"
-            >
+    <section class="scene" id="scene2">
+        <h1>NEW ISRAEL HIGH SCHOOL</h1>
+        <h2>ZOMBIE APOCALYPSE</h2>
+    </section>
 
-        </section>
+    <section class="scene" id="scene3">
+        <div class="developer">
+            <p>ANG KANI NGA DULA KAY</p>
+            <strong>GIBUHAT NI</strong>
+            <h2>JOHN REYNARD MIRAS</h2>
+            <p>SIYA ANG DEVELOPER ANI</p>
+        </div>
+    </section>
 
+    <section class="scene" id="scene4">
+        <div class="warning">
+            <h2>TIMANI KINI NGA DULA</h2>
+            <p>KAY PANG LINGAW² RA.</p>
+            <p>AYAW SERYOSOHA ARON DI KA MAMATAY 😂</p>
+        </div>
+    </section>
 
-        <!-- SCENE 2 -->
-        <section class="scene" id="scene2">
+    <section class="scene final-scene" id="scene5">
 
-            <h1>
-                NEW ISRAEL HIGH SCHOOL
-            </h1>
+        <div class="final-logo-wrap">
+            <div class="blood-effect blood1"></div>
+            <div class="blood-effect blood2"></div>
+            <div class="blood-effect blood3"></div>
 
-            <h2>
-                ZOMBIE APOCALYPSE
-            </h2>
+            <img src="nihs.png" class="final-logo" alt="NIHS Logo">
 
-        </section>
-
-
-        <!-- SCENE 3 -->
-        <section class="scene" id="scene3">
-
-            <div class="developer">
-
-                <p>
-                    ANG KANI NGA DULA KAY
-                </p>
-
-                <strong>
-                    GIBUHAT NI
-                </strong>
-
-                <h2>
-                    JOHN REYNARD MIRAS
-                </h2>
-
-                <p>
-                    SIYA ANG DEVELOPER ANI
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- SCENE 4 -->
-        <section class="scene" id="scene4">
-
-            <div class="warning">
-
-                <h2>
-                    TIMANI KINI NGA DULA
-                </h2>
-
-                <p>
-                    KAY PANG LINGAW² RA.
-                </p>
-
-                <p>
-                    AYAW SERYOSOHA ARON DI KA MAMATAY 😂
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- SCENE 5 -->
-        <section class="scene final-scene" id="scene5">
-
-            <div class="final-logo-wrap">
-
-                <div class="blood-effect blood1"></div>
-                <div class="blood-effect blood2"></div>
-                <div class="blood-effect blood3"></div>
-
-                <img
-                    src="nihs.png"
-                    class="final-logo"
-                    alt="NIHS Logo"
-                >
-
-                <div class="game-name">
-                    NIHS ZOMBIE APOCALYPSE
-                </div>
-
-            </div>
-
-
-            <button id="startButton">
-                START
-            </button>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         HOME MENU
-    ========================== -->
-
-    <main id="homeMenu">
-
-        <div class="home-background"></div>
-
-        <div class="home-overlay"></div>
-
-
-        <section class="home-content">
-
-            <img
-                src="nihs.png"
-                class="menu-logo"
-                alt="NIHS Logo"
-            >
-
-
-            <h1 class="menu-title">
-                NIHS ZOMBIE
-            </h1>
-
-            <h2 class="menu-subtitle">
-                APOCALYPSE
-            </h2>
-
-
-            <div class="menu-buttons">
-
-                <button
-                    class="menu-button play-button"
-                    id="playButton"
-                >
-                    <span class="button-icon">▶</span>
-                    PLAY
-                </button>
-
-
-                <button
-                    class="menu-button"
-                    id="settingsButton"
-                >
-                    <span class="button-icon">⚙</span>
-                    SETTINGS
-                </button>
-
-
-                <button
-                    class="menu-button"
-                    id="shopButton"
-                >
-                    <span class="button-icon">🛒</span>
-                    SHOP
-                </button>
-
-            </div>
-
-
-            <div class="menu-footer">
+            <div class="game-name">
                 NIHS ZOMBIE APOCALYPSE
             </div>
+        </div>
 
-        </section>
+        <button id="startButton">START</button>
 
-    </main>
+    </section>
+
+</main>
 
 
-    <script src="script.js"></script>
+<!-- =====================================================
+     HOME MENU
+===================================================== -->
+
+<main id="homeMenu">
+
+    <div class="home-background"></div>
+    <div class="home-overlay"></div>
+
+    <section class="home-content">
+
+        <img src="nihs.png" class="menu-logo" alt="NIHS">
+
+        <h1 class="menu-title">NIHS ZOMBIE</h1>
+        <h2 class="menu-subtitle">APOCALYPSE</h2>
+
+        <div class="menu-buttons">
+
+            <button class="menu-button play-button" id="playButton">
+                ▶ PLAY
+            </button>
+
+            <button class="menu-button" id="settingsButton">
+                ⚙ SETTINGS
+            </button>
+
+            <button class="menu-button" id="shopButton">
+                🛒 SHOP
+            </button>
+
+        </div>
+
+        <div class="menu-footer">
+            NIHS ZOMBIE APOCALYPSE
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     PLAY / ROLE SELECTION
+===================================================== -->
+
+<main id="roleScreen" class="game-screen">
+
+    <div class="screen-bg"></div>
+
+    <section class="selection-content">
+
+        <h1 class="screen-title">PILIA ANG IMONG ROLE</h1>
+
+        <p class="screen-description">
+            Kinsa ka sa dula?
+        </p>
+
+        <div class="big-selection">
+
+            <button class="choice-card" data-role="student">
+                <div class="choice-icon">🎒</div>
+                <strong>ESTUDYANTE</strong>
+                <small>Grade 7 - 12</small>
+            </button>
+
+            <button class="choice-card" data-role="teacher">
+                <div class="choice-icon">👨‍🏫</div>
+                <strong>TEACHER</strong>
+                <small>Grade 7 - 12</small>
+            </button>
+
+        </div>
+
+        <button class="back-button" id="roleBack">
+            ← BALIK
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     GRADE SELECTION
+===================================================== -->
+
+<main id="gradeScreen" class="game-screen">
+
+    <div class="screen-bg"></div>
+
+    <section class="selection-content">
+
+        <h1 class="screen-title">PILIA ANG GRADE</h1>
+
+        <div class="grade-grid">
+
+            <button class="grade-button" data-grade="7">GRADE 7</button>
+            <button class="grade-button" data-grade="8">GRADE 8</button>
+            <button class="grade-button" data-grade="9">GRADE 9</button>
+            <button class="grade-button" data-grade="10">GRADE 10</button>
+            <button class="grade-button" data-grade="11">GRADE 11</button>
+            <button class="grade-button" data-grade="12">GRADE 12</button>
+
+        </div>
+
+        <button class="back-button" id="gradeBack">
+            ← BALIK
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     GENDER SELECTION
+===================================================== -->
+
+<main id="genderScreen" class="game-screen">
+
+    <div class="screen-bg"></div>
+
+    <section class="selection-content">
+
+        <h1 class="screen-title">PILIA ANG GENDER</h1>
+
+        <p class="screen-description">
+            Pilia kung lalaki o babaye ang imong character.
+        </p>
+
+        <div class="big-selection">
+
+            <button class="choice-card" data-gender="boy">
+                <div class="choice-icon">👦</div>
+                <strong>LALAKI</strong>
+            </button>
+
+            <button class="choice-card" data-gender="girl">
+                <div class="choice-icon">👧</div>
+                <strong>BABAYE</strong>
+            </button>
+
+        </div>
+
+        <button class="back-button" id="genderBack">
+            ← BALIK
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     CHARACTER SELECTION
+===================================================== -->
+
+<main id="characterScreen" class="game-screen">
+
+    <div class="screen-bg"></div>
+
+    <section class="character-content">
+
+        <div class="character-header">
+
+            <div>
+                <h1 class="screen-title">PILIA ANG CHARACTER</h1>
+
+                <p id="selectionInfo">
+                    Character
+                </p>
+            </div>
+
+        </div>
+
+
+        <div id="characterGrid" class="character-grid">
+            <!-- JavaScript ang magbutang sa characters -->
+        </div>
+
+
+        <div class="character-actions">
+
+            <button class="back-button" id="characterBack">
+                ← BALIK
+            </button>
+
+            <button class="continue-button" id="characterContinue" disabled>
+                PADAYON →
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     CHARACTER CONFIRMATION
+===================================================== -->
+
+<main id="confirmScreen" class="game-screen">
+
+    <div class="screen-bg"></div>
+
+    <section class="confirm-content">
+
+        <h1 class="screen-title">
+            NAPILI NIMO
+        </h1>
+
+        <div id="selectedCharacter"></div>
+
+        <p id="confirmText"></p>
+
+        <button id="confirmButton" class="continue-button">
+            PADAYON →
+        </button>
+
+        <button id="confirmBack" class="back-button">
+            ← BALIK
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
 
 </body>
-</html>               
+</html>
